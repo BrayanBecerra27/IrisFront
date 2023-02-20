@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "6dc0f416-4260-4921-ae76-687c129d22f4",
+		"name": "Iris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10317718"
+	},
+	"item": [
+		{
+			"name": "GetToDo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddToDo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"title\" : \"Prueba 4\",\r\n    \"isFavorite\" : false,\r\n    \"isCompleted\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30940/ToDo/addToDo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30940",
+					"path": [
+						"ToDo",
+						"addToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTodo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cjpawwprbe.us-east-1.awsapprunner.com/ToDo/checkToDo?id=5",
+					"protocol": "https",
+					"host": [
+						"cjpawwprbe",
+						"us-east-1",
+						"awsapprunner",
+						"com"
+					],
+					"path": [
+						"ToDo",
+						"checkToDo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteToDo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://cjpawwprbe.us-east-1.awsapprunner.com/ToDo/deleteToDo?id=5",
+					"protocol": "https",
+					"host": [
+						"cjpawwprbe",
+						"us-east-1",
+						"awsapprunner",
+						"com"
+					],
+					"path": [
+						"ToDo",
+						"deleteToDo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FavoriteToDo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://cjpawwprbe.us-east-1.awsapprunner.com/ToDo/favoriteToDo?id=2",
+					"protocol": "https",
+					"host": [
+						"cjpawwprbe",
+						"us-east-1",
+						"awsapprunner",
+						"com"
+					],
+					"path": [
+						"ToDo",
+						"favoriteToDo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"user1\",\r\n  \"password\": \"password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cjpawwprbe.us-east-1.awsapprunner.com/api/Users/authenticate",
+					"protocol": "https",
+					"host": [
+						"cjpawwprbe",
+						"us-east-1",
+						"awsapprunner",
+						"com"
+					],
+					"path": [
+						"api",
+						"Users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
